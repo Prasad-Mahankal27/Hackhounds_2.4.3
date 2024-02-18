@@ -24,7 +24,8 @@ class _ProfileDetailsScreenState extends State<ProfileDetailsScreen> {
           children: [
             const SizedBox(height: 16.0),
             const CircleAvatar(
-              backgroundImage: AssetImage('assets/profile_image.png'), // Your profile image asset
+             // backgroundImage: AssetImage('assets/profile_image.png'), // Your profile image asset
+             child: Icon(Icons.person_2, size: 50,),
               radius: 40.0,
             ),
             const SizedBox(height: 16.0),

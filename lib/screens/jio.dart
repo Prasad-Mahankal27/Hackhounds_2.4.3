@@ -15,83 +15,86 @@ class JioDetailScreen extends StatelessWidget {
         appBar: AppBar(
           title: Text(title),
         ),
-        body: SingleChildScrollView(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
-              Hero(
-                tag: title,
-                child: Container(
-                  height: 200,
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                      image: NetworkImage(imageUrl),
-                      fit: BoxFit.cover,
+        body: Padding(
+          padding: const EdgeInsets.all(12.0),
+          child: SingleChildScrollView(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                Hero(
+                  tag: title,
+                  child: Container(
+                    height: 200,
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                        image: NetworkImage(imageUrl),
+                        fit: BoxFit.cover,
+                      ),
                     ),
                   ),
                 ),
-              ),
-              const SizedBox(height: 20),
-              const Text(
-                'Empty Slots Available: 3',
-                style: TextStyle(fontSize: 20),
-              ),
-              const SizedBox(height: 10),
-              const Text(
-                'Time Required to Charge: 1.5 hours',
-                style: TextStyle(fontSize: 20),
-              ),
-
-              const SizedBox(height: 20),
-              const Text(
-                'Travel Time: 44 min',
-                style: TextStyle(fontSize: 20),
-              ),
-              const SizedBox(height: 40),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  ElevatedButton(
-                    onPressed: () {
-                      Navigator.pop(context);
-                    },
-                    child: Text('Cancel'),
-                    style: ElevatedButton.styleFrom(
-                      fixedSize: const Size(90, 60),
-                      backgroundColor: Colors.red,
-                      padding: EdgeInsets.symmetric(vertical: 16),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10),
+                const SizedBox(height: 20),
+                const Text(
+                  'Empty Slots Available: 3',
+                  style: TextStyle(fontSize: 20),
+                ),
+                const SizedBox(height: 10),
+                const Text(
+                  'Time Required to Charge: 1.5 hours',
+                  style: TextStyle(fontSize: 20),
+                ),
+          
+                const SizedBox(height: 20),
+                const Text(
+                  'Travel Time: 44 min',
+                  style: TextStyle(fontSize: 20),
+                ),
+                const SizedBox(height: 40),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    ElevatedButton(
+                      onPressed: () {
+                        Navigator.pop(context);
+                      },
+                      child: Text('Cancel'),
+                      style: ElevatedButton.styleFrom(
+                        fixedSize: const Size(90, 60),
+                        backgroundColor: Colors.red,
+                        padding: EdgeInsets.symmetric(vertical: 16),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10),
+                        ),
                       ),
                     ),
-                  ),
-                  ElevatedButton(
-                    onPressed: () {
-                      // Handle elevated booking button tap
-                      // Add your booking logic here
-                    },
-                    child: Text('Book Now'),
-                    style: ElevatedButton.styleFrom(
-                      fixedSize: const Size(90, 60),
-                      backgroundColor: Colors.blue,
-                      padding: EdgeInsets.symmetric(vertical: 16),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10),
+                    ElevatedButton(
+                      onPressed: () {
+                        // Handle elevated booking button tap
+                        // Add your booking logic here
+                      },
+                      child: Text('Book Now'),
+                      style: ElevatedButton.styleFrom(
+                        fixedSize: const Size(90, 60),
+                        backgroundColor: Colors.blue,
+                        padding: EdgeInsets.symmetric(vertical: 16),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10),
+                        ),
                       ),
                     ),
-                  ),
-                  IconButton(
-                    icon: Icon(Icons.directions),
-                    onPressed: () {
-                      launchGoogleMaps();
-                    },
-                    iconSize: 32,
-                    color: Colors.green,
-                  ),
-                ],
-              ),
-              SizedBox(height: 20),
-            ],
+                    IconButton(
+                      icon: Icon(Icons.directions),
+                      onPressed: () {
+                        launchGoogleMaps();
+                      },
+                      iconSize: 32,
+                      color: Colors.green,
+                    ),
+                  ],
+                ),
+                SizedBox(height: 20),
+              ],
+            ),
           ),
         ),
       ),
